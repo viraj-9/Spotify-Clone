@@ -6,7 +6,7 @@ In this project, I have designed a Spotify clone using HTML and CSS.
 
 ## Live Demo
 
-https://viraj-9.github.io/spotify-clone/
+https://viraj-9.github.io/Spotify-Clone/
 
 Ignore any warning shown while opening the project (clone).
 It is a standalone clone project and it does not have a backend, so there is no need to worry about that warning.
