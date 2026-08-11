@@ -31,7 +31,7 @@ body {
 
 .container {
      display: flex;
-    flex-direction: column;
+     flex-direction: column;
      position: absolute;
      width: 100%;
      height: 100vh;
@@ -107,20 +107,67 @@ body {
 
 .search {
      margin-top: 5px;
-     cursor: pointer;
+
+     width: 480px;
+     height: 46px;
+
+     display: flex;
+     align-items: center;
+
+     box-sizing: border-box;
+     padding: 0 14px;
+
      background-color: rgb(32, 32, 32);
      border: none;
-     border-radius: 50%;
-     height: 46px;
-     width: 46px;
-     align-items: center;
-     justify-content: center;
+     border-radius: 30px;
 }
 
-.search>img {
-     margin-top: 3px;
-     height: 25px;
+.search .sh {
      width: 25px;
+     height: 25px;
+
+     flex-shrink: 0;
+}
+
+.search input {
+     flex: 1;
+
+     margin-left: 14px;
+
+     border: none;
+     outline: none;
+
+     background: transparent;
+
+     color: white;
+
+     font-family: "Spotify Mix", sans-serif;
+     font-size: 16px;
+}
+
+.search input::placeholder {
+     color: #b3b3b3;
+     opacity: 1;
+}
+
+
+
+.search-divider {
+     width: 1px;
+     height: 26px;
+
+     margin-left: 10px;
+     margin-right: 10px;
+
+     background-color: #666;
+}
+
+
+.search .browse {
+     width: 32px;
+     height: 30px;
+
+     flex-shrink: 0;
 }
 
 .navlinks {
@@ -202,6 +249,8 @@ body {
      border-radius: 25px;
      width: 105px;
      height: 45px;
+     transition: transform 0.2s cubic-bezier(0.3, 0, 0.4, 1);
+
 
 }
 
@@ -213,7 +262,7 @@ body {
 .box1 {
      margin-top: 5px;
      margin-left: 7.5px;
-     width: 24%;
+     width: 29%;
      height: 88%;
      border-radius: 7.5px;
      background-color: rgb(18 18 18);
@@ -256,10 +305,10 @@ body {
 }
 
 .minicontainer1 {
-    margin-left: 25px;
-    background-color: inherit;
-    margin-top: 100px;
-    /* margin-bottom: auto; ❌ removed */
+     margin-left: 0px;
+     background-color: inherit;
+     margin-top: 20px;
+     /* margin-bottom: auto; ❌ removed */
 }
 
 
@@ -442,7 +491,7 @@ h3 {
      margin-left: 20px;
      display: flex;
      /* width: 520%; */
-     gap: 10px;
+     gap: 0px;
      overflow-x: auto;
      overflow-y: hidden;
      padding-right: 45px;
@@ -455,33 +504,58 @@ h3 {
 
 .robx {
      /* margin-left: 10px; */
-     margin-left: 5px;
+     /* margin-left: 5px;
+     position: relative;
      width: 175px;
      flex-shrink: 0;
      display: flex;
      flex-direction: column;
      box-sizing: border-box;
+     transition: background-color .3s ease; */
 
      /* gap: 30px; */
+     margin-left: 5px;
+     position: relative;
+     width: 190px;
+     flex-shrink: 0;
+     display: flex;
+     flex-direction: column;
+     box-sizing: border-box;
+     align-self: flex-start;
+     padding: 10px;
+     border-radius: 8px;
+     transition: background-color 0.3s ease-in;
 }
 
 .aobx {
      /* margin-left: 10px; */
+     position: relative;
      margin-left: 5px;
-     width: 175px;
+     width: 190px;
      flex-shrink: 0;
      display: flex;
      flex-direction: column;
      box-sizing: border-box;
+     align-self: flex-start;
 
+     padding: 10px;
+     border-radius: 8px;
+
+     transition: all 0.2s linear(0, 0.1, 0.25, 0.5, 0.75, 0.9, 1);
+     transform-origin: center;
      /* gap: 30px; */
 }
 
 .poster {
-     border-radius: 5px;
+     /* border-radius: 5px;
      width: 175px;
      height: 175px;
+     object-fit: cover; */
+     width: 100%;
+     height: auto;
+     aspect-ratio: 1;
      object-fit: cover;
+     border-radius: 5px;
 }
 
 .banner {
@@ -558,14 +632,15 @@ h3 {
      height: 60px;
 }
 
-.minicontainer1 {
+.minicontainer2 {
      margin-left: 25px;
      background-color: inherit;
      margin-bottom: auto;
      margin-top: 100px;
+     box-sizing: border-box;
 }
 
-.hd {
+.hdr {
      color: white;
      font-size: 17.5px;
      font-family: "Spotify Mix Bold" !important;
@@ -590,16 +665,21 @@ h3 {
 .box3 {
      font-family: "Spotify Mix Bold" !important;
      display: flex;
-     gap: 100px;
+     gap: 50px;
      font-size: 15px;
+     box-sizing: border-box;
      overflow-y: hidden;
+     margin-right: 30px;
+
 }
 
 .usefullinks {
      list-style: none;
+     box-sizing: border-box;
 }
 
 .usefullinks a {
+     width: 150px;
      margin-top: 10px;
      font-family: "Spotify Mix" !important;
      display: block;
@@ -608,13 +688,13 @@ h3 {
 }
 
 .seperate {
-     margin-left: 75px;
+     margin-left: 55px;
 }
 
 .logos {
      display: flex;
      gap: 15px;
-     
+
 }
 
 .social {
@@ -628,7 +708,7 @@ h3 {
      justify-content: center;
 }
 
-.social img{
+.social img {
      margin-top: 3px;
      width: 16px;
      height: 16px;
@@ -637,7 +717,7 @@ h3 {
 /* .space{
      height: ;
 } */
-.last{
+.last {
      margin-top: 50px;
      margin-right: 35px;
      display: flex;
@@ -647,19 +727,18 @@ h3 {
      justify-content: flex-end;
      margin-bottom: 50px;
 }
-.lastbox1{
+
+.lastbox1 {
      margin-top: 30px;
      margin-left: 8px;
      margin-right: 8px;
      border-radius: 10px;
      height: 65px;
      display: flex;
-     background: linear-gradient(
-        90deg,
-        #ae2896 0%,
-        #8b5cc7 45%,
-        #509bf5 100%
-    );
+     background: linear-gradient(90deg,
+               #ae2896 0%,
+               #8b5cc7 45%,
+               #509bf5 100%);
      position: relative;
      margin-top: auto;
      align-items: center;
@@ -668,7 +747,7 @@ h3 {
 
 }
 
-.texts{
+.texts {
      padding: 5px 10px 5px 10px;
      display: flex;
      margin-left: 5px;
@@ -678,11 +757,12 @@ h3 {
      gap: 3px;
      color: White;
 }
-.texts :nth-child(1){
+
+.texts :nth-child(1) {
      font-family: "Spotify Mix Title" !important;
 }
 
-.btn4{
+.btn4 {
      margin-right: 30px;
      font-family: "Spotify Mix Bold" !important;
      background-color: white;
@@ -693,11 +773,230 @@ h3 {
      height: 50px;
      border-radius: 50px;
 }
-/* =========================================================
-   RESPONSIVE MEDIA QUERIES
-   (Base/desktop styles above are untouched. These overrides
-   only kick in on smaller viewports.)
-   ========================================================= */
+
+.play {
+     position: absolute;
+     border-radius: 50%;
+     border: none;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     right: 6px;
+     bottom: 12px;
+     width: 48px;
+     height: 48px;
+
+     border: none;
+     border-radius: 50%;
+     background: #1ED760;
+     /* display: none; */
+     cursor: pointer;
+     box-shadow: 0 8px 18px rgba(0, 0, 0, .35);
+     opacity: 0;
+     transform: translateY(8px);
+     /* transition: transform .2s ease; */
+
+}
+
+.play:hover {
+     transform: scale(1.02);
+     background: #28f16e;
+}
+
+.play {
+     transition: transform 0.2s linear,
+          background-color 0.3s ease-in;
+}
+
+.play:hover svg {
+     fill: #28f16e;
+     transform: scale(1.05);
+}
+
+.play1 {
+     position: absolute;
+     border-radius: 50%;
+     border: none;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     right: 8px;
+     bottom: 70px;
+     width: 48px;
+     height: 48px;
+
+     border: none;
+     border-radius: 50%;
+     background: #1ED760;
+     /* display: none; */
+     cursor: pointer;
+     box-shadow: 0 8px 18px rgba(0, 0, 0, .35);
+     opacity: 0;
+     transform: translateY(10px);
+     transition: all .3s ease;
+
+}
+
+.rd {
+     bottom: 10px;
+}
+
+.hd {
+     bottom: 10px;
+}
+
+
+.lbox {
+     width: 360px;
+     box-sizing: border-box;
+}
+
+.robx:hover .play {
+     opacity: 1;
+     transform: translateY(0);
+}
+
+.aobx:hover .play1 {
+     opacity: 1;
+     transform: translateY(0);
+}
+
+.navlinks a span {
+     display: inline-block;
+     color: #b3b3b3;
+     transition: transform 0s linear;
+}
+
+.navlinks a span:hover {
+     color: #fff;
+     transform: scale(1.02);
+}
+
+.nav a span:hover {
+     color: white;
+     transform: scale(1.02);
+}
+
+.ls a {
+     display: inline-block;
+     color: #b3b3b3;
+     transition: transform 0.1s cubic-bezier(0.3, 0, 0.4, 1);
+}
+
+.ls a:hover {
+     transform: scale(1.02);
+}
+
+.login:hover {
+     transform: scale(1.04);
+     background-color: #cac9c9;
+}
+
+.navcontainer button {
+     transition: background-color 0.2s ease-in;
+}
+
+.navcontainer button:hover {
+     background-color: rgb(39, 38, 38);
+     transform: scale(1.04);
+}
+
+.createbtn {
+     transition: background-color 0.1s linear;
+}
+
+.createbtn:hover {
+     background-color: rgb(39, 38, 38);
+     cursor: pointer;
+}
+
+.cmbtn {
+     transition: transform 0s linear;
+}
+
+.cmbtn:hover {
+     cursor: pointer;
+     transform: scale(1.03);
+}
+
+.reference a {
+     transition: color 0.1s linear;
+}
+
+.reference a:hover {
+     color: white;
+}
+
+.cookies span:hover {
+     text-decoration: underline;
+     text-decoration-thickness: 1.5px;
+}
+
+.btn3 {
+     transition: transform 0s linear;
+}
+
+.btn3:hover {
+     transform: scale(1.03);
+     border-color: white;
+     cursor: pointer;
+}
+
+.heading1 a:hover {
+     text-decoration: underline;
+     /* text-decoration-thickness: ; */
+}
+
+.title1:hover {
+     text-decoration: underline;
+}
+
+.title2 {
+     display: flex;
+     gap: 3px;
+}
+
+.title2:hover {
+     text-decoration: underline;
+}
+
+.explicit:hover {
+     text-decoration: none;
+}
+
+.lbox a:hover {
+     color: white;
+}
+
+.logos button:hover {
+     background-color: rgb(81, 80, 80);
+}
+
+.btn4 {
+     transition: transform 0.1s ease-in;
+}
+
+.btn4:hover {
+     transform: scale(1.05);
+     cursor: pointer;
+     background-color: rgb(227, 227, 227);
+}
+
+.robx {
+     overflow: hidden;
+}
+
+.robx:hover {
+     background-color: rgb(29, 28, 28);
+}
+
+.aobx:hover {
+     background-color: rgb(29, 28, 28);
+}
+
+.imgbox {
+     position: relative;
+}
 
 /* ---------- Large tablets / small laptops ---------- */
 @media (max-width: 1200px) {
@@ -889,6 +1188,7 @@ h3 {
           flex-direction: column;
           gap: 15px;
           font-size: 13px;
+          box-sizing: border-box;
      }
 
      .seperate {
