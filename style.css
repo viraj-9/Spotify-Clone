@@ -729,12 +729,13 @@ h3 {
 }
 
 .lastbox1 {
+     display: flex;
      margin-top: 30px;
      margin-left: 8px;
      margin-right: 8px;
      border-radius: 10px;
      height: 65px;
-     display: flex;
+     /* display: flex; */
      background: linear-gradient(90deg,
                #ae2896 0%,
                #8b5cc7 45%,
@@ -997,6 +998,185 @@ h3 {
 .imgbox {
      position: relative;
 }
+
+.playbar {
+     /* display: flex; 
+     */
+     display: none;
+     margin-top: 30px;
+     margin-left: 8px;
+     margin-right: 8px;
+     border-radius: 10px;
+     height: 65px;
+     /* display: flex; */
+
+     position: relative;
+     margin-top: auto;
+     align-items: center;
+     justify-content: space-between;
+     margin-bottom: 10px;
+}
+
+.partition1 {
+     display: flex;
+     margin-left: 5px;
+     align-items: center;
+     justify-content: center;
+     gap: 15px;
+}
+
+#song {
+     width: 60px;
+     height: 60px;
+     border-radius: 5px;
+}
+
+.btitle1 {
+     text-decoration: none;
+     font-family: "Spotify Mix" !important;
+     font-size: 14px;
+     color: white;
+     font-weight: 400;
+     box-sizing: border-box;
+}
+
+.btitle2 {
+     align-items: center;
+     gap: 7.5px;
+     display: flex;
+     text-decoration: none;
+     font-size: 12px;
+     color: #b3b3b3;
+     font-family: "Spotify Mix" !important;
+     overflow-wrap: break-word;
+
+}
+
+.plusicon {
+     width: 15px;
+     height: 15px;
+}
+
+.btitle1:hover {
+     text-decoration: underline;
+}
+
+.btitle2 {
+     display: flex;
+     gap: 3px;
+}
+
+.btitle2:hover {
+     text-decoration: underline;
+}
+.partition2{
+     margin-left: 25%;
+     align-items: center;
+     position: fixed;
+     justify-content: center;
+}
+.pcontain1 {
+     display: flex;
+     gap: 15px;
+     align-items: center;
+     margin-left: 300px;
+     margin-bottom: 5px;
+}
+
+.pcontain1 button {
+     width: 35px;
+     height: 35px;
+     border: none;
+     border-radius: 50px;
+     align-items: center;
+     cursor: pointer;
+}
+
+.pcontain1 button img {
+     margin-top: 3px;
+     width: 15px;
+     height: 15px;
+}
+
+.pcontain1 .cb {
+     background-color: black;
+}
+
+.pcontain2 {
+     display: flex;
+     gap: 5px;
+     align-items: center;
+     width: 600px;
+     margin-left: 120px;
+}
+
+.progress-bar {
+     position: relative;
+     flex: 1;
+     height: 4px;
+     background: #4d4d4d;
+     border-radius: 10px;
+     cursor: pointer;
+}
+.progressfilled{
+     position: absolute;
+     left: 0; 
+     top: 0;
+     width: 0%;
+     height: 100%;
+     background: white;
+     border-radius: 10px;
+}
+.progressthumb {
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+.partition3{
+     display: flex;
+     gap: 2px;
+     width: 20%;
+     align-items: center;
+     
+}
+.partition3 button{
+     background-color: black;
+     width: 35px;
+     height: 35px;
+     border: none;
+     border-radius: 50px;
+     align-items: center;
+     cursor: pointer;
+
+}
+.partition3 button img {
+     margin-top: 3px;
+     width: 15px;
+     height: 15px;
+}
+.bar2{
+     width: 100%;
+}
+
+.duration{
+     diplay:flex;
+     font-family: "Spotify Mix" !important;
+     font-size: 12px;
+     color: #b3b3b3;
+}
+.currenttime{
+     display: flex;
+     font-family: "Spotify Mix" !important;
+     font-size: 12px;
+     color: #b3b3b3;
+     margin-right: 5px;
+}
+
 
 /* ---------- Large tablets / small laptops ---------- */
 @media (max-width: 1200px) {
