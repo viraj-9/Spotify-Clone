@@ -1,30 +1,15 @@
 console.log("till 31st august");
 
 async function getSongs() {
-     let a = await fetch("assets/songs/")
-     let response = await a.text();
-     console.log(response)
+     let response = await fetch("assets/songs.json");
+     let songs = await response.json();
 
-     let div = document.createElement('div')
-     div.innerHTML = response;
-     let as = div.getElementsByTagName('a')
-     console.log(as)
-     let songs = []
-     for (let index = 0; index < as.length; index++) {
-          const element = as[index];
-          if (element.href.endsWith('mp3')) {
-               let filename = decodeURIComponent(
-                    new URL(element.href).pathname.split("/").pop()
-               );
-               console.log(filename)
-               songs.push({
-                    name: filename,
-                    url: element.href
-               });
-          }
-
-     }
-     return songs;
+     return songs.map(function(song) {
+          return {
+               name: song,
+               url: "assets/songs/" + encodeURIComponent(song)
+          };
+     });
 }
 
 async function main() {
@@ -67,7 +52,7 @@ async function main() {
 
                     console.log("Title: ", cleanTitle);
                     console.log("File name: ", cleanFileName);
-                    return cleanTitle == cleanFileName;
+                    return cleanTitle.includes(cleanFileName);
                })
 
                if (!song) {
