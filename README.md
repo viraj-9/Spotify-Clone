@@ -1,20 +1,18 @@
 # Spotify Clone
 
-This is my second Frontend Project built using HTML and CSS.
+This is my second Frontend Project built using HTML, CSS and JavaScript.
 Project focuses on standalone designs with some transitions that match the current (2026) Spotify Web Player design.
-In this project, I have designed a Spotify clone using HTML and CSS.
+In this project, I have designed a Spotify clone using HTML, CSS and JavaScript.
 
 ## Live Demo
 
-https://viraj-9.github.io/Spotify-Clone/
-
-Ignore any warning shown while opening the project (clone).
-It is a standalone clone project and it does not have a backend, so there is no need to worry about that warning.
+https://spotify-clone-lovat-omega.vercel.app/
 
 ## Built With
 
 - HTML5
 - CSS3 (Flexbox, Media Queries, Transitions)
+- JavaScript (DOM Manipulation, Async/Await, Fetch API, Audio API)
 
 ## Features
 
@@ -24,6 +22,11 @@ It is a standalone clone project and it does not have a backend, so there is no 
 - Sticky navigation bar
 - Hover animations and transitions
 - Music player UI
+- Dynamic song loading using JavaScript
+- Individual song playback on card click
+- Play/Pause music controls
+- Dynamic music player information (Song Poster, Title and Artist)
+- Bottom music player appears when a song is played
 - Footer banner
 
 ## What I Learned
@@ -33,6 +36,13 @@ It is a standalone clone project and it does not have a backend, so there is no 
 - Responsive design with media queries
 - Hover effects and transitions
 - Building complex UI layouts with pure HTML and CSS
+- DOM manipulation using JavaScript
+- Handling user interactions with event listeners
+- Using async/await with the Fetch API
+- Retrieving and processing song data dynamically
+- Working with the JavaScript Audio API
+- Implementing play and pause functionality
+- Updating UI elements dynamically based on the selected song
 
 ## Disclaimer
 
@@ -43,5 +53,5 @@ All rights to Spotify branding and content belong to Spotify.
 
 **Viraj Rokade**
 
-- GitHub Profile: **viraj0_**
+- GitHub Profile: **viraj-9**
 - GitHub: https://github.com/viraj-9
