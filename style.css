@@ -878,6 +878,19 @@ h3 {
      transform: scale(1.02);
 }
 
+/*Pratik Contribution*/
+.nav .installapp span:hover {
+     transform: none;
+}
+
+.installapp:hover {
+     transform: scale(1.02);
+}
+
+.installapp:hover .install {
+     color: white;
+}
+
 .ls a {
      display: inline-block;
      color: #b3b3b3;
