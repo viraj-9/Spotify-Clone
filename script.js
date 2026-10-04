@@ -69,8 +69,15 @@ async function main() {
                }
                let poster = card.querySelector(".poster");
                let title = card.querySelector(".title1").innerText;
-               let artist = card.querySelector(".title2").innerText;
+               // let artist = card.querySelector(".title2").innerText;
+               // Pratik's Contribution: Remove explicit badge from artist name
 
+               let artistEl = card.querySelector(".title2").cloneNode(true);
+               let badge = artistEl.querySelector(".explicit");
+               if (badge) {
+                    badge.remove();
+               }    
+               let artist = artistEl.textContent.replace(/\s+/g, " ").trim();
 
 
                let song = songs.find(function (song) {
